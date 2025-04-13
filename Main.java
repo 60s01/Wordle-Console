@@ -1,47 +1,51 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
-class Main{
-  final static String InputChar = "Введите слово: ";
-  final static String End = "Завершение программмы...";
-  final static String EndWhile = "exit";
-  final static String Limit = "Слово состоит не из 5 букв";
-  final static String Limit2 = "Слово состоит из запрещённых символов";
-  
-  
-  public static void main(String[] args){	
-	Scanner scanner = new Scanner(System.in);
-	String str = "";
-	
-	do {
-	  p(InputChar);
-	  str = scanner.nextLine();
-	  
-	  //проверка на длину слова
-	  if(str.length() != 5) {
-		pln(Limit); 
-		break;
-	  }
-	  
-	  //проверка строк на лишние символы
-	  if(checkString(str) == false) {
-		pln(Limit2);
-		break;
-	  }
-	  
-	  pln(""); 
-	} while(str.equals(EndWhile) == false);
-	pln(End);
-  }
-  
-  static boolean checkString(String str){
-	return str.matches("^[а-яА-Я]+$");
-  }
-  
-  static void p(String str){
-	System.out.print(str);
-  }
-  
-  static void pln(String str){
-	System.out.println(str);
-  }
+public class Main {
+    public static void main(String[] args) {
+        String filePath = "Dictionary.txt";
+        
+        //Создаем
+		List<String> dictionary = new ArrayList<>();
+        
+        // Запоминаем
+        try {
+            Scanner fileScanner = new Scanner(new File(filePath), "UTF-8");
+            while (fileScanner.hasNextLine()) {
+                String word = fileScanner.nextLine().trim();
+                if (!word.isEmpty()) {
+                    dictionary.add(word);
+                }
+            }
+            fileScanner.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("Файл не найден!");
+            return;
+        }
+
+        //Проверяем
+        Scanner inputScanner = new Scanner(System.in);
+        System.out.println("Введите 'exit' для выхода.");
+        
+        while (true) {
+            System.out.print("Введите слово: ");
+            String userWord = inputScanner.nextLine().trim();
+            
+            if (userWord.equalsIgnoreCase("exit")) {
+                break;
+            }
+            
+            if (dictionary.contains(userWord)) {
+				System.out.println("Слово найдено :)");
+            } else {
+				System.out.println(userWord);
+                System.out.println("Слово не найдено :(");
+            }
+        }
+        inputScanner.close();
+        System.out.println("Сворачиваемся.");
+    }
 }
