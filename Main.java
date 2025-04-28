@@ -6,21 +6,6 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class Main {
-	static final int MAX_ATTEMPTS = 6;
-    static final int WORD_LENGTH = 5;
-	static final String ENCODING = "UTF-8";
-	static final String FILEPATH = "Dictionary.txt";
-	static final String END1 = "exit";
-
-	static final String END0 = "Для выхода введите ";
-	static final String RANDOM_WORD = "Ничего страшного. В следующий раз повезёт! Загаданное слово: ";
-	static final String QUANTITY_TRY = "Осталось попыток: ";
-	static final String USERWORD = "Введите слово: ";
-	static final String WINNER = "Вы угадали слово!!!";
-	
-	static final String ERROR_FILE = "Файл не найден!";
-	static final String LIMITSYMBOL = "Слово должно состоять из 5 БУКВ!!!";
-	static final String WORDNOTFOUND = "Такого слова в словаре нет, повторите попытку!!!";
 	
     public static void main(String[] args) {
 	  //Создаем и Запоминаем словарь
@@ -28,8 +13,7 @@ public class Main {
       List<String> dictionary = new ArrayList<String>();
 	  String randomWord;
 	  {
-      try {
-		Scanner fileScanner = new Scanner(new File(filePath), ENCODING);
+      try (Scanner fileScanner = new Scanner(new File(filePath), ENCODING)){
         while (fileScanner.hasNextLine()) {
           String word = fileScanner.nextLine().trim();
           if (!word.isEmpty()) {
