@@ -1,13 +1,15 @@
 package Representation;
 
-public class ConsoleView {
-    private final RulesService rulesService;
+import Logic.RulesLogic;
 
-    public ConsoleView(RulesService rulesService) {
-        this.rulesService = rulesService;
-    }
+public class RulesRepresentation {
+  private final RulesLogic rulesLogic;
 
-    public void showRules() {
-        System.out.println(rulesService.getRules());
-    }
+  public RulesRepresentation(RulesLogic rulesLogic) {
+    this.rulesLogic = rulesLogic;
+  }
+
+  public void showRules() {
+    System.out.println("\n" + rulesLogic.getRules());
+  }
 }

@@ -1,2 +1,5 @@
 *.txt
 !Dictionary.txt
+!Rules.txt
+!Modification.txt
+

@@ -1,17 +1,21 @@
 package Logic;
 
-public class RulesService {
-  private final RulesRepository rulesRepository;
+import Storage.RulesStorage;
+import java.io.IOException;
+import static Shared.ConstantsLogic.ERROR_FILE_RULES;
 
-  public RulesService(RulesRepository rulesRepository) {
-    this.rulesRepository = rulesRepository;
+public class RulesLogic {
+  private final RulesStorage rulesStorage;
+
+  public RulesLogic(RulesStorage rulesStorage) {
+    this.rulesStorage = rulesStorage;
   }
 
   public String getRules() {
     try {
-      return rulesRepository.loadRules();
+      return rulesStorage.loadRules();
     } catch (IOException e) {
-      return "Правила не найдены. Обратитесь к администратору.";
+      return ERROR_FILE_RULES;
     }
   }
 }

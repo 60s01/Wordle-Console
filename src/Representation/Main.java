@@ -1,45 +1,37 @@
 package Representation;
 
 import java.util.Scanner;
-import static Shared.Constants.*;
-import static Representation.RulesRepresentation.*;
+import static Shared.ConstantsRepresentation.*;
 
 public class Main{
   public static void start(){
-	System.out.println(BEGIN);
-	boolean infinity = true;
-	do{
-	  choiseAction();
-	  infinity = userChoise(infinity);
-	}while(infinity);
-  }
+	DictionaryRepresentationFacade dictionaryRepresentationFacade = new DictionaryRepresentationFacade();
+    String randomWord = dictionaryRepresentationFacade.getRandomWord();
+	
+	while (true) {
+      printMenu();
+      String choice = new Scanner(System.in).nextLine();
+            
+      switch (choice) {
+        case "1":
+          new GameRepresentationFacade().startGame();
+          break;
+        case "2":
+          new RulesRepresentationFacade().showRules();
+          break;
+        case "3":
+          return;
+        default:
+          System.out.println("Неверный ввод");
+        }
+    }
+  } 
   
-  static boolean userChoise(boolean infinity){
-	Scanner scanner = new Scanner(System.in);
-	String userActions = scanner.nextLine();
-	switch(userActions){
-	  case "1": 
-	    
-		break;
-	  case "2": 
-	    ();
-		break;
-	  case "3": 
-	    System.out.println(END);
-	    infinity = false;
-		break;
-	  default :
-	    System.out.println("!!!");
-	}
-	System.out.println();
-	return infinity;
-  }
-  
-  static void choiseAction(){
-    System.out.println(CHOICE + ": ");
-	for(int i = 0; i < 3; i++){
-	  System.out.println(ACTION[i]);
-	}
-	System.out.println();
+  private static void printMenu() {
+	System.out.println("\n" + BEGIN);
+    System.out.println("1. Начать игру");
+    System.out.println("2. Показать правила");
+    System.out.println("3. Выход");
+    System.out.print("\nВыберите действие: ");
   }
 }
