@@ -6,7 +6,7 @@ import java.util.Random;
 
 import Storage.DictionaryStorage;
 
-import static Shared.ConstantsLogic.*;
+import static Shared.ConstantsLogic.ERROR_FILE_DICTIONARY;
 
 public class DictionaryLogic {
   private final DictionaryStorage dictionaryStorage;

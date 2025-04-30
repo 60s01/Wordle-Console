@@ -1,11 +1,12 @@
 package Representation;
 
+import java.util.List;
+import java.util.Scanner;
+
 import Logic.MainGame;
 import Logic.DictionaryLogic;
 import Storage.DictionaryStorage;
-
-import java.util.List;
-import java.util.Scanner;
+import static Shared.ConstantsRepresentation.*;
 
 public class GameRepresentationFacade {
   private final MainGame mainGame;
@@ -19,11 +20,11 @@ public class GameRepresentationFacade {
   
   public void startGame() {
 	Scanner scanner = new Scanner(System.in);
-	System.out.println("\nДля выхода введите 'exit'");
+	System.out.println(END1);
 	
 	while(true) {
-	  System.out.println("\nПопыток осталось: " + mainGame.getAttemptsLeft() + " " + mainGame.getRandomWord());
-	  System.out.print("Введите слово: ");
+	  System.out.println(QUANTITY_TRY + mainGame.getAttemptsLeft() + " " + mainGame.getRandomWord());
+	  System.out.print(ENTER_WORD);
 	  String input = scanner.nextLine().trim();
 	  System.out.println();
 	  MainGame.GameResult result = mainGame.processGuess(input, dictionary);
@@ -31,11 +32,11 @@ public class GameRepresentationFacade {
 	  System.out.println(result.message);
 	  if (result.shouldExit) break;
       if (result.isGameWon) {
-        System.out.println("\nВЫ ВЫЙГРАЛИ!!!");
+        System.out.println(WINNER);
         break;
       }
       if (result.attemptsLeft == 0) {
-        System.out.println("\nСЛУЧАЙНОЕ СЛОВО: " + mainGame.getRandomWord() + "\n");
+        System.out.println(LOSER + mainGame.getRandomWord() + "\n");
         break;
       }
 	}

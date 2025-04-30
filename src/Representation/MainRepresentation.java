@@ -3,35 +3,35 @@ package Representation;
 import java.util.Scanner;
 import static Shared.ConstantsRepresentation.*;
 
-public class Main{
+public class MainRepresentation{
   public static void start(){
 	DictionaryRepresentationFacade dictionaryRepresentationFacade = new DictionaryRepresentationFacade();
     String randomWord = dictionaryRepresentationFacade.getRandomWord();
+	System.out.println(BEGIN);
 	
 	while (true) {
       printMenu();
       String choice = new Scanner(System.in).nextLine();
             
       switch (choice) {
-        case "1":
+        case START_GAME_CHOISE:
           new GameRepresentationFacade().startGame();
           break;
-        case "2":
+        case WRITE_RULES_CHOISE:
           new RulesRepresentationFacade().showRules();
           break;
-        case "3":
+        case USER_EXIT_CHOISE:
           return;
         default:
-          System.out.println("Неверный ввод");
+          System.out.println(WRONG_CHOISE);    
         }
     }
   } 
   
   private static void printMenu() {
-	System.out.println("\n" + BEGIN);
-    System.out.println("1. Начать игру");
-    System.out.println("2. Показать правила");
-    System.out.println("3. Выход");
-    System.out.print("\nВыберите действие: ");
+	
+	for(int i = 0; i < 4; i++) {
+	  System.out.print(ACTION[i]);
+	}
   }
 }

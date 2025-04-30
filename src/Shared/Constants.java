@@ -12,7 +12,7 @@ public class Constants{
   
   
   //Общие
-  public static final String END1 = "exit";
+  
 
 }
 
