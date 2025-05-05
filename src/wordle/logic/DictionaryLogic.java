@@ -1,12 +1,12 @@
-package Logic;
+package wordle.logic;
 
 import java.io.FileNotFoundException;
 import java.util.List;
 import java.util.Random;
 
-import Storage.DictionaryStorage;
+import wordle.storage.DictionaryStorage;
 
-import static Shared.ConstantsLogic.ERROR_FILE_DICTIONARY;
+import static wordle.shared.ConstantsLogic.ERROR_FILE_DICTIONARY;
 
 public class DictionaryLogic {
   private final DictionaryStorage dictionaryStorage;

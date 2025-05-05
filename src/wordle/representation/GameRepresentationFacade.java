@@ -1,12 +1,12 @@
-package Representation;
+package wordle.representation;
 
 import java.util.List;
 import java.util.Scanner;
 
-import Logic.MainGame;
-import Logic.DictionaryLogic;
-import Storage.DictionaryStorage;
-import static Shared.ConstantsRepresentation.*;
+import wordle.logic.MainGame;
+import wordle.logic.DictionaryLogic;
+import wordle.storage.DictionaryStorage;
+import static wordle.shared.ConstantsRepresentation.*;
 
 public class GameRepresentationFacade {
   private final MainGame mainGame;

@@ -1,7 +1,7 @@
-package Representation;
+package wordle.representation;
 
 import java.util.Scanner;
-import static Shared.ConstantsRepresentation.*;
+import static wordle.shared.ConstantsRepresentation.*;
 
 public class MainRepresentation{
   public static void start(){

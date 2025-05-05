@@ -1,8 +1,8 @@
-package Logic;
+package wordle.logic;
 
 import java.util.List;
 
-import static Shared.ConstantsLogic.*;
+import static wordle.shared.ConstantsLogic.*;
 
 public class MainGame {
   private static String randomWord;

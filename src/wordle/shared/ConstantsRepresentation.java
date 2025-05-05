@@ -1,4 +1,4 @@
-package Shared;
+package wordle.shared;
 
 public class ConstantsRepresentation {
   //MainRepresentation

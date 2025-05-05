@@ -1,8 +1,8 @@
-package Logic;
+package wordle.logic;
 
-import Storage.RulesStorage;
+import wordle.storage.RulesStorage;
 import java.io.IOException;
-import static Shared.ConstantsLogic.ERROR_FILE_RULES;
+import static wordle.shared.ConstantsLogic.ERROR_FILE_RULES;
 
 public class RulesLogic {
   private final RulesStorage rulesStorage;

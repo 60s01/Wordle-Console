@@ -1,6 +1,6 @@
-package Representation;
+package wordle.representation;
 
-import Logic.RulesLogic;
+import wordle.logic.RulesLogic;
 
 public class RulesRepresentation {
   private final RulesLogic rulesLogic;

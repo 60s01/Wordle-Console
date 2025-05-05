@@ -1,4 +1,4 @@
-package Shared;
+package wordle.shared;
 
 public class Constants{
   //РАЗБИТЬ НА 3 ФАЙЛА в соответствии с слоями

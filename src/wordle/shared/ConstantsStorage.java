@@ -1,4 +1,4 @@
-package Shared;
+package wordle.shared;
 
 public class ConstantsStorage{
   public static final String ENCODING = "UTF-8";

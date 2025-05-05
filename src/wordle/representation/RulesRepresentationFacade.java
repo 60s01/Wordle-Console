@@ -1,7 +1,7 @@
-package Representation;
+package wordle.representation;
 
-import Logic.RulesLogic;
-import Storage.RulesStorage;
+import wordle.logic.RulesLogic;
+import wordle.storage.RulesStorage;
 
 public final class RulesRepresentationFacade {
   private final RulesRepresentation rulesRepresentation;

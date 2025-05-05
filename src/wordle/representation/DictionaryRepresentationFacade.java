@@ -1,9 +1,9 @@
-package Representation;
+package wordle.representation;
 
 import java.util.List;
 
-import Logic.DictionaryLogic;
-import Storage.DictionaryStorage;
+import wordle.logic.DictionaryLogic;
+import wordle.storage.DictionaryStorage;
 
 public class DictionaryRepresentationFacade {
   private final DictionaryLogic dictionaryLogic;
