@@ -1,4 +1,4 @@
-package wordle.shared;
+package wordle;
 
 class StartGame{
   public static void main(String args[]){
