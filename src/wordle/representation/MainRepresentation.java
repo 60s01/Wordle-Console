@@ -9,10 +9,9 @@ public class MainRepresentation{
     String randomWord = dictionaryRepresentationFacade.getRandomWord();
 	System.out.println(BEGIN);
 	
-	while (true) {
+	while(true) {
       printMenu();
-      String choice = new Scanner(System.in).nextLine();
-            
+      String choice = new Scanner(System.in).next();      
       switch (choice) {
         case START_GAME_CHOISE:
           new GameRepresentationFacade().startGame();
@@ -24,12 +23,11 @@ public class MainRepresentation{
           return;
         default:
           System.out.println(WRONG_CHOISE);    
-        }
+      }
     }
   } 
   
   private static void printMenu() {
-	
 	for(int i = 0; i < 4; i++) {
 	  System.out.print(ACTION[i]);
 	}

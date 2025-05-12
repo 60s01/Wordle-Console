@@ -4,11 +4,11 @@ import java.util.List;
 
 import static wordle.shared.ConstantsLogic.*;
 
-public class MainGame {
+public class Game {
   private static String randomWord;
   private int attemptsLeft = MAX_ATTEMPTS;
   
-  public MainGame(String randomWord) {
+  public Game(String randomWord) {
 	this.randomWord = randomWord;
   }
   

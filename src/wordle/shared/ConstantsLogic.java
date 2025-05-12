@@ -6,7 +6,7 @@ public class ConstantsLogic{
   //RulesLogic
   public static final String ERROR_FILE_RULES = "Файл с правилами игры не найден!";
   
-  //MainGame
+  //Game
   public static final int MAX_ATTEMPTS = 6;
   public static final int WORD_LENGTH = 5;
   public static final String END0 = "exit";
