@@ -3,29 +3,29 @@ package wordle.representation;
 import java.util.Scanner;
 import static wordle.shared.ConstantsRepresentation.*;
 
-public class MainRepresentation{
+public class StartMenuRepresentation{
   public static void start(){
-	DictionaryRepresentationFacade dictionaryRepresentationFacade = new DictionaryRepresentationFacade();
-    String randomWord = dictionaryRepresentationFacade.getRandomWord();
+	Scanner sc = new Scanner(System.in);
 	System.out.println(BEGIN);
 	
 	while(true) {
       printMenu();
-      String choice = new Scanner(System.in).next();      
+      String choice = sc.next();
       switch (choice) {
-        case START_GAME_CHOISE:
+        case CHOISE_START_GAME:
           new GameRepresentationFacade().startGame();
           break;
-        case WRITE_RULES_CHOISE:
+        case CHOISE_WRITE_RULES:
           new RulesRepresentationFacade().showRules();
           break;
-        case USER_EXIT_CHOISE:
+        case CHOISE_USER_EXIT:
+		  sc.close();
           return;
         default:
-          System.out.println(WRONG_CHOISE);    
+          System.out.println(CHOISE_WRONG);
       }
     }
-  } 
+  }
   
   private static void printMenu() {
 	for(int i = 0; i < 4; i++) {

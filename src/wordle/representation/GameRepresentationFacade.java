@@ -23,7 +23,7 @@ public class GameRepresentationFacade {
 	System.out.println(END1);
 	
 	while(true) {
-	  System.out.println(QUANTITY_TRY + game.getAttemptsLeft() + " " + game.getRandomWord());
+	  System.out.println(QUANTITY_TRY + game.getAttemptsLeft() + " -> " + game.getSecretWord());
 	  System.out.print(ENTER_WORD);
 	  String input = scanner.nextLine().trim();
 	  System.out.println();
@@ -36,7 +36,7 @@ public class GameRepresentationFacade {
         break;
       }
       if (result.attemptsLeft == 0) {
-        System.out.println(LOSER + game.getRandomWord() + "\n");
+        System.out.println(LOSER + game.getSecretWord() + "\n");
         break;
       } 
 	}

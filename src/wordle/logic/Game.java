@@ -5,11 +5,11 @@ import java.util.List;
 import static wordle.shared.ConstantsLogic.*;
 
 public class Game {
-  private static String randomWord;
+  private static String secretWord;
   private int attemptsLeft = MAX_ATTEMPTS;
   
   public Game(String randomWord) {
-	this.randomWord = randomWord;
+	this.secretWord = randomWord;
   }
   
   public GameResult processGuess(String userWord, List<String> dictionary) {
@@ -31,11 +31,11 @@ public class Game {
 
   private String checkWord(String userWord) {
 	StringBuilder result = new StringBuilder();
-    for (int i = 0; i < randomWord.length(); i++) {
+    for (int i = 0; i < secretWord.length(); i++) {
       char c = userWord.charAt(i);
-	  if (c == randomWord.charAt(i)) {
+	  if (c == secretWord.charAt(i)) {
 		result.append(CORRECTLY);
-      } else if (randomWord.indexOf(c) != -1) {
+      } else if (secretWord.indexOf(c) != -1) {
         result.append(GOOD);
       } else {
         result.append(BAD);
@@ -48,8 +48,8 @@ public class Game {
 	return attemptsLeft;
   }
   
-  public String getRandomWord() {
-	return randomWord;
+  public String getSecretWord() {
+	return secretWord;
   }
 	
   public static class GameResult {

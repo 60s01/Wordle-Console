@@ -1,13 +1,13 @@
 package wordle.shared;
 
 public class ConstantsRepresentation {
-  //MainRepresentation
+  //StartMenuRepresentation
   public static final String BEGIN = "Добро пожаловать в WORDLE";
   public static final String[] ACTION = { "\n1 : Начать новую игру\n", "2 : Прочитать правила игры\n", "3 : Выйти из программы\n", "\nВведите число для выбора действия: " };
-  public static final String START_GAME_CHOISE = "1";
-  public static final String WRITE_RULES_CHOISE = "2";
-  public static final String USER_EXIT_CHOISE = "3";
-  public static final String WRONG_CHOISE = "\nДля выбора действия введите число!!! Например: '1'";
+  public static final String CHOISE_START_GAME = "1";
+  public static final String CHOISE_WRITE_RULES = "2";
+  public static final String CHOISE_USER_EXIT = "3";
+  public static final String CHOISE_WRONG = "\nДля выбора действия введите число!!! Например: '1'";
   
   //GameRepresentationFacade
   public static final String END0 = "exit";
