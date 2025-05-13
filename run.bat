@@ -1,7 +1,11 @@
 @echo off
 cls
 
-javac -encoding UTF-8 -d out src/wordle/*.java src/wordle/logic/*.java src/wordle/representation/*.java src/wordle/shared/*.java src/wordle/storage/*.java
+dir /B /S src\wordle\*.java > sources.txt
+
+javac -encoding UTF-8 -d out @sources.txt
+
+del sources.txt
 
 java -Dfile.encoding=cp866 -cp out wordle.StartGame
 
