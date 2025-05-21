@@ -6,7 +6,7 @@ import java.util.Scanner;
 import wordle.logic.Game;
 import wordle.logic.DictionaryLogic;
 import wordle.storage.DictionaryStorage;
-import static wordle.shared.ConstantsRepresentation.*;
+import static wordle.representation.ConstantsRepresentation.*;
 
 public class GameRepresentationFacade {
   private final Game game;

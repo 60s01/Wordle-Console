@@ -4,8 +4,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-import static wordle.shared.ConstantsStorage.FILEPATH1;
-import static wordle.shared.ConstantsStorage.ENCODING;
+import static wordle.storage.ConstantsStorage.FILEPATH1;
+import static wordle.storage.ConstantsStorage.ENCODING;
 
 public class RulesStorage {
   public String loadRules() throws IOException {

@@ -6,7 +6,7 @@ import java.util.Random;
 
 import wordle.storage.DictionaryStorage;
 
-import static wordle.shared.ConstantsLogic.ERROR_FILE_DICTIONARY;
+import static wordle.logic.ConstantsLogic.ERROR_FILE_DICTIONARY;
 
 public class DictionaryLogic {
   private final DictionaryStorage dictionaryStorage;

@@ -1,8 +1,9 @@
-package wordle.shared;
+package wordle.logic;
 
 public class ConstantsLogic{
   //DictionaryLogic
   public static final String ERROR_FILE_DICTIONARY = "Файл игры 'словарь' не найден!";
+  
   //RulesLogic
   public static final String ERROR_FILE_RULES = "Файл с правилами игры не найден!";
   

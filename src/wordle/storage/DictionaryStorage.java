@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import static wordle.shared.ConstantsStorage.FILEPATH0;
-import static wordle.shared.ConstantsStorage.ENCODING;
+import static wordle.storage.ConstantsStorage.FILEPATH0;
+import static wordle.storage.ConstantsStorage.ENCODING;
 
 public class DictionaryStorage {
   public List<String> loadDictionary() throws FileNotFoundException {

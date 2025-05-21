@@ -1,4 +1,4 @@
-package wordle.shared;
+package wordle.representation;
 
 public class ConstantsRepresentation {
   //StartMenuRepresentation

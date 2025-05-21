@@ -2,7 +2,7 @@ package wordle.logic;
 
 import java.util.List;
 
-import static wordle.shared.ConstantsLogic.*;
+import static wordle.logic.ConstantsLogic.*;
 
 public class Game {
   private static String secretWord;

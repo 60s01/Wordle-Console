@@ -2,7 +2,7 @@ package wordle.logic;
 
 import wordle.storage.RulesStorage;
 import java.io.IOException;
-import static wordle.shared.ConstantsLogic.ERROR_FILE_RULES;
+import static wordle.logic.ConstantsLogic.ERROR_FILE_RULES;
 
 public class RulesLogic {
   private final RulesStorage rulesStorage;
