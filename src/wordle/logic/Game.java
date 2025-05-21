@@ -43,14 +43,6 @@ public class Game {
     }
     return result.toString().trim();
   }
-
-  public int getAttemptsLeft() {
-	return attemptsLeft;
-  }
-  
-  public String getSecretWord() {
-	return secretWord;
-  }
 	
   public static class GameResult {
     public final String message;
@@ -65,6 +57,12 @@ public class Game {
       this.shouldExit = shouldExit;
     }
   }
-
   
+  public int getAttemptsLeft() {
+	return attemptsLeft;
+  }
+  
+  public String getSecretWord() {
+	return secretWord;
+  } 
 }

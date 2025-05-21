@@ -1,6 +1,5 @@
 package wordle.representation;
 
-import java.util.List;
 import java.util.Scanner;
 
 import wordle.logic.Game;
@@ -10,12 +9,11 @@ import static wordle.representation.ConstantsRepresentation.*;
 
 public class GameRepresentationFacade {
   private final Game game;
-  private final List<String> dictionary;
+  private final DictionaryLogic dictionaryLogic;
   Scanner scanner = new Scanner(System.in);
   
   public GameRepresentationFacade () {
-	DictionaryLogic dictionaryLogic = new DictionaryLogic(new DictionaryStorage());
-	this.dictionary = dictionaryLogic.getDictionary();
+	dictionaryLogic = new DictionaryLogic(new DictionaryStorage());
 	this.game = new Game(dictionaryLogic.getRandomWord());
   }
   
