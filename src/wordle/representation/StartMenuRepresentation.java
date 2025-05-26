@@ -1,6 +1,7 @@
 package wordle.representation;
 
 import java.util.Scanner;
+import java.io.FileNotFoundException;
 import static wordle.representation.ConstantsRepresentation.*;
 
 public class StartMenuRepresentation{
@@ -13,8 +14,13 @@ public class StartMenuRepresentation{
       String choice = sc.next();
       switch (choice) {
         case CHOISE_START_GAME:
-          new GameRepresentationFacade().startGame();
-          break;
+          try {
+		    new GameRepresentationFacade().startGame();
+		  } catch (FileNotFoundException e) {
+			System.out.print(ERROR_FILE_DICTIONARY);
+		  } finally {
+			break;
+		  }
         case CHOISE_WRITE_RULES:
           new RulesRepresentationFacade().showRules();
           break;

@@ -2,6 +2,7 @@ package wordle.logic;
 
 import java.util.List;
 
+import wordle.logic.DictionaryLogic;
 import static wordle.logic.ConstantsLogic.*;
 
 public class Game {
@@ -12,14 +13,14 @@ public class Game {
 	this.secretWord = randomWord;
   }
   
-  public GameResult processGuess(String userWord, List<String> dictionary) {
+  public GameResult processGuess(String userWord, DictionaryLogic dictionaryLogic) {
     if (userWord.equalsIgnoreCase(END0)) {
       return new GameResult("", true, attemptsLeft, true);
     }
 	if (userWord.length() != WORD_LENGTH) {
       return new GameResult(LIMIT_SYMBOL, false, attemptsLeft, false);
     }
-	if (!dictionary.contains(userWord)) {
+	if (!dictionaryLogic.check(userWord)) {
       return new GameResult(WORD_NOT_FOUND, false, attemptsLeft, false);
     }
 	

@@ -1,6 +1,7 @@
 package wordle.representation;
 
 import java.util.Scanner;
+import java.io.FileNotFoundException;
 
 import wordle.logic.Game;
 import wordle.logic.DictionaryLogic;
@@ -12,9 +13,9 @@ public class GameRepresentationFacade {
   private final DictionaryLogic dictionaryLogic;
   Scanner scanner = new Scanner(System.in);
   
-  public GameRepresentationFacade () {
-	dictionaryLogic = new DictionaryLogic(new DictionaryStorage());
-	this.game = new Game(dictionaryLogic.getRandomWord());
+  public GameRepresentationFacade() throws FileNotFoundException {
+	  dictionaryLogic = new DictionaryLogic(new DictionaryStorage());
+	  this.game = new Game(dictionaryLogic.getRandomWord());
   }
   
   public void startGame() {
@@ -25,7 +26,7 @@ public class GameRepresentationFacade {
 	  System.out.print(ENTER_WORD);
 	  String input = scanner.nextLine().trim();
 	  System.out.println();
-	  Game.GameResult result = game.processGuess(input, dictionary);
+	  Game.GameResult result = game.processGuess(input, dictionaryLogic);
 	 
 	  System.out.println(result.message);
 	  if (result.shouldExit) break;

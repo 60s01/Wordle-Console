@@ -16,8 +16,7 @@ public class ConstantsRepresentation {
   public static final String ENTER_WORD = "Введите слово: ";
   public static final String WINNER = "\nВЫ ВЫЙГРАЛИ!!!";
   public static final String LOSER = "\nНичего страшного. В следующий раз всё получится! Загаданное слово: ";
-  
-  
+  public static final String ERROR_FILE_DICTIONARY = "Файл игры 'словарь' не найден!";
   
   public static final String END = "Выход из программы...";
 }
