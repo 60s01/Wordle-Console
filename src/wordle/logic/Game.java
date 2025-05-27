@@ -14,7 +14,7 @@ public class Game {
   }
   
   public GameResult processGuess(String userWord, DictionaryLogic dictionaryLogic) {
-    if (userWord.equalsIgnoreCase(END0)) {
+    if (userWord.equalsIgnoreCase(COMMAND_EXIT)) {
       return new GameResult("", true, attemptsLeft, true);
     }
 	if (userWord.length() != WORD_LENGTH) {

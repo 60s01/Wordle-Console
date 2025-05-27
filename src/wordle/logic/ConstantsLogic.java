@@ -7,7 +7,7 @@ public class ConstantsLogic{
   //Game
   public static final int MAX_ATTEMPTS = 6;
   public static final int WORD_LENGTH = 5;
-  public static final String END0 = "exit";
+  public static final String COMMAND_EXIT = "exit";
   public static final String LIMIT_SYMBOL = "Слово должно состоять из " + WORD_LENGTH + " БУКВ!!!";
   public static final String WORD_NOT_FOUND = "Такого слова в словаре нет, повторите попытку!!!";
   public static final String CORRECTLY = "+ ";

@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Random;
 
-import static wordle.storage.ConstantsStorage.FILEPATH0;
+import static wordle.storage.ConstantsStorage.DICTIONARY_PATH;
 import static wordle.storage.ConstantsStorage.ENCODING;
 
 public class DictionaryStorage {
@@ -15,7 +15,7 @@ public class DictionaryStorage {
   
   public DictionaryStorage() throws FileNotFoundException {
 	dictionary = new ArrayList<>();
-    try (Scanner fileScanner = new Scanner(new File(FILEPATH0), ENCODING)) {
+    try (Scanner fileScanner = new Scanner(new File(DICTIONARY_PATH), ENCODING)) {
       while (fileScanner.hasNextLine()) {
         String word = fileScanner.nextLine().trim();
         if (!word.isEmpty()) {
