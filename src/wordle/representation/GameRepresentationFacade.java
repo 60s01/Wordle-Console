@@ -22,7 +22,7 @@ public class GameRepresentationFacade {
 	System.out.println(END1);
 	
 	while(true) {
-	  System.out.println(QUANTITY_TRY + game.getAttemptsLeft() + " -> " + game.getSecretWord());
+	  System.out.println(QUANTITY_TRY + game.getAttemptsLeft() + " -> Загаданное слово: " + game.getSecretWord());
 	  System.out.print(ENTER_WORD);
 	  String input = scanner.nextLine().trim();
 	  System.out.println();
